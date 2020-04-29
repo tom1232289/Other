@@ -27,47 +27,16 @@ create table #db_cfg
 --------------------------------≈‰÷√ø™ º-------------------------------
 truncate table #db_cfg
 insert #db_cfg (name, file_path, log_path, mo_path, dump_path)
-       select   'mpb10drsj',
---                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10drsj.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10drsj.ldf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10drsj_memory',--[sql2014mo]
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10drsj.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10drsj.ldf', '', --[sql2008]
+       select   'mydb01',
+--                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mydb01.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mydb01.ldf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mydb01_memory',--[sql2014mo]
+                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mydb01.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mydb01.ldf', '', --[sql2008]
 
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10drsj.dump'
+                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mydb01.dump'
        union all
-       select   'mpb10proc',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10proc.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10proc.ldf', '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10proc.dump'
-       union all
-       select   'mpb10lssj',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10lssj.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10lssj.ldf', '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10lssj.dump'
-       union all
-       select   'mpb10gdsj',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10gdsj.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10gdsj.ldf',  '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10gdsj.dump'
-       union all
-       select   'mpb10drhq',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10drhq.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10drhq.ldf',  '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10drhq.dump'
-       union all
-       select   'mpb10lshq',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10lshq.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10lshq.ldf',  '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10lshq.dump'
-       union all
-       select   'mpb10gdhq',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10gdhq.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10gdhq.ldf',  '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10gdhq.dump'
-       union all
-       select   'mpb10xxsj',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10xxsj.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10xxsj.ldf',  '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10xxsj.dump'
-       union all
-       select   'mpb10xxhq',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10xxhq.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10xxhq.ldf',  '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10xxhq.dump'
-       union all
-       select   'mpb10exch',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10exch.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mpb10exch.ldf',  '',
-                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mpb10exch.dump'
+       select   'mydb02',
+                'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mydb02.mdf', 'D:\mssql\MSSQL10_50.FIRST\MSSQL\Data\mydb02.ldf', '',
+                'D:\mssql\MSSQL10_50.FIRST\MSSQL\backup\mydb02.dump'
+
 
 --select * from #db_cfg
 --------------------------------≈‰÷√Ω· ¯-------------------------------
@@ -319,8 +288,8 @@ as
     '
     exec tracert_db_cfg @re_sql
 
-    --update mpb10drsj..czyb set czymm = 'k0g6d4c7baae2d27922f'
-    --update mpb10drsj..yybb set ip = '127.0.0.1', ip_hb = '127.0.0.1'
+    --update mydb01..czyb set czymm = 'k0g6d4c7baae2d27922f'
+    --update mydb01..yybb set ip = '127.0.0.1', ip_hb = '127.0.0.1'
 go
 
 ------------------------------------------------------
